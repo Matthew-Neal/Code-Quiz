@@ -5,13 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Quiz</title>
-    <link rel="stylesheet" href="stylsheet.css" />
+    <link rel="stylesheet" href="./Assets/stylesheet.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 
 <body>
 
+    <header class="container">
+        <div class="row">
+            <div class="col text-left">
+                <button class="btn" id="highScoresButton">View Highscores</button>
+            </div>
+            <div></div>
+            <div class="col text-right" id="timer">Timer</div>
+        </div>
+    </header>
 
-    <script src="script.js"></script>
+    <main>
+        <div class="row text-center" id="quizHeader">
+            <div class="col">
+                <h1>JavaScript Coding Quiz</h1>
+            </div>
+        </div>
+
+        <div id="startQuiz">
+            <div class="row text-center">
+                <div class="col-md-12 text-center">
+                    <p>Answer the following quiz questions.</p>
+                    <button class="btn btn-info" id="startButton">Start</button>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+
+    <script src="./Assets/script.js"></script>
 </body>
 
 </html>

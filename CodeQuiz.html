@@ -18,46 +18,67 @@
                 <button class="btn" id="highScoresButton">View Highscores</button>
             </div>
             <div></div>
-            <div class="col text-right" id="timer">Timer</div>
+            <div class="col text-right" id="time">Timer</div>
         </div>
     </header>
 
     <main>
-        <div class="row text-center" id="quizHeader">
-            <div class="col">
-                <h1>JavaScript Coding Quiz</h1>
+        <div class="container">
+            <!--Code Title-->
+            <div class="row text-center" id="quizHeader">
+                <div class="col">
+                    <h1>Coding Quiz</h1>
+                </div>
             </div>
-        </div>
 
-        <div id="startQuiz">
-            <div class="row text-center">
-                <div class="col-md-12 text-center">
-                    <p>Answer the following questions.</p>
-                    <button class="btn btn-info" id="startButton">Start</button>
+            <div id="startDisplay">
+                <div class="row text-center">
+                    <div class="col-md-12 text-center">
+                        <p>Try to answer the following code-related questions within the time limit. Keep in mind that
+                            incorrect answers will penalize your score/time by ten seconds.</p>
+                        <button class="btn btn-info" id="startButton">Start</button>
+                    </div>
                 </div>
             </div>
         </div>
 
 
-        <!-- Start Questions         -->
+        <!--Quiz Starts-->
         <div class="row">
             <div class="col"></div>
             <div class="col-md-12 text-center">
-                <ul id="question1"></ul>
+                <ul id="qa"></ul>
             </div>
             <div class="col"></div>
         </div>
         <div class="row">
             <div class="col"></div>
             <div class="col-md-12 text-center">
-                <div id="questionCheck"></div>
+                <div id="answerCheck"></div>
             </div>
             <div class="col"></div>
         </div>
 
+        <!--Highscore info begins-->
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-md-12 text-center">
+                <div id="highscoreContent"></div>
+            </div>
+            <div class="col"></div>
+        </div>
+
+
+        <!--Highscore Display-->
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-md-12 text-center">
+                <div id="highscoreDisplay"></div>
+            </div>
+            <div class="col"></div>
+        </div>
 
     </main>
-
 
     <script src="./Assets/script.js"></script>
 </body>

@@ -23,29 +23,29 @@ if (scoreArray) { // this checks if scoreArray already exists
 //Question Arrays
 const questions = [
     {
-        question: `What is two + two?`,
-        answers: [`one`, `two`, `three`, `four`,],
-        correctAnswer: `four`,
+        question: `__________ is a scripting or programming language that allows you to implement complex features on web pages`,
+        answers: [`CSS`, `Coding`, `html`, `JavaScript`,],
+        correctAnswer: `JavaScript`,
     },
     {
-        question: `What name is short for Robert?`,
-        answers: [`Bob`, `Bill`, `Will`, `Dick`],
-        correctAnswer: `Bob`,
+        question: `What is the purpose of JavaScript on a website?`,
+        answers: [`Puts the website on the internet`, `Allows complex features`, `Makes the website sit static`, `creates the URL`],
+        correctAnswer: `Allows complex features`,
     },
     {
-        question: `What name is my name?`,
-        answers: [`Bob`, `Bill`, `Matt`, `Dick`],
-        correctAnswer: `Matt`,
+        question: `JavaScript is the dominant client-side scripting language of the Web, with ____ of websites using it for this purpose.`,
+        answers: [`20%`, `5%`, `95%`, `ALL`],
+        correctAnswer: `95%`,
     },
     {
-        question: `What name is my dog's name?`,
-        answers: [`Bob`, `Akela`, `Will`, `Dick`],
-        correctAnswer: `Akela`,
+        question: `What are the conditions of an if/else statement enclosed within?`,
+        answers: [`quotes`, `curly brackets`, `commas`, `parentheses`],
+        correctAnswer: `parentheses`,
     },
     {
-        question: `Are you hungry?`,
-        answers: [`No`, `Maybe`, `Yes`, `A little`],
-        correctAnswer: `Yes`,
+        question: `A very useful tool during the developement and used for printing content to debug:`,
+        answers: [`console.log`, `JavaScript`, `terminal/bash`, `for loops`],
+        correctAnswer: `console.log`,
     },
 ];
 
@@ -129,8 +129,10 @@ function checkAnswer() {
             endQuiz();
         }
     } else {
-        checkAnswerDisplay.textContent = "Correct";
+        checkAnswerDisplay.textContent = "Correct!";
         checkAnswerDisplay.style.textAlign = "center";
+        checkAnswerDisplay.style.fontWeight = "bold";
+        checkAnswerDisplay.style.fontSize = "2rem";
         answerCheck.appendChild(checkAnswerDisplay);
     }
     index++;
@@ -227,11 +229,11 @@ function highscoresDisplay() {
         highscoreList.appendChild(highscoreLatest);
     };
     highscoreDisplay.appendChild(highscoreList);
-    //GO BACK BUTTON
-    const goBackButton = document.createElement("button");
-    goBackButton.innerHTML = "Go Back";
-    goBackButton.className += "btn btn-info mr-3";
-    goBackButton.onclick = function (event) {
+    //TRY AGAIN BUTTON
+    const tryAgainButton = document.createElement("button");
+    tryAgainButton.innerHTML = "Try Again";
+    tryAgainButton.className += "btn btn-info mr-3";
+    tryAgainButton.onclick = function (event) {
         event.preventDefault;
         window.location.reload();
     };
@@ -248,7 +250,7 @@ function highscoresDisplay() {
     };
 
     //Displays highscore information
-    highscoreDisplay.appendChild(goBackButton);
+    highscoreDisplay.appendChild(tryAgainButton);
     highscoreDisplay.appendChild(clearButton);
 
     //Disable View Highscore Button

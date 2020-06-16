@@ -9,3 +9,12 @@ h1 {
 body {
   font-size: 1rem;
 }
+
+#qa {
+  list-style: none;
+}
+#checkAnswerDisplay {
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
